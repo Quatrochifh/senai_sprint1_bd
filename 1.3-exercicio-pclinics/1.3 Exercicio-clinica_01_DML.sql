@@ -7,9 +7,8 @@ GO
 
 
 INSERT INTO TIPOPET(Tipo)
-VALUES('Porco'),('Peixe');
+VALUES('Porco'),('Peixe'),('Sapo'),('Cobra');
 GO
-
 
 
 INSERT INTO DONO(nomeDono)
@@ -23,7 +22,6 @@ VALUES(2, 'Matheus'),(1, 'Ribeiro');
 GO
 
 
-
 INSERT INTO PET(idRacas,idDono, NomePet)
 VALUES(1, 2, 'GREEN'),(2, 1, 'FISH');
 GO
@@ -31,10 +29,12 @@ GO
 
 
 INSERT INTO RACAS(idTipopet, Qualraca)
-VALUES( 2, 'JAVALI'),( 1, 'DOURADO');
+VALUES( 5, 'SAPINHO'),( 6, 'SUCURI');
 GO
 
-
+INSERT INTO RACAS(idTipopet, Qualraca)
+VALUES( 3, 'SAPO'),( 4, 'SUCURI'),( 5, 'SHIH-TZU'),( 6, 'SHIH-TZU');
+GO
 
 
 INSERT INTO ATENDIMENTO(idVeterinario, idPet, Horario_Atendimento)

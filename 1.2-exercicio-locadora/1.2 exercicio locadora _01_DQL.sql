@@ -18,3 +18,27 @@ GO
 
 SELECT * FROM ALUGUEL;
 GO
+
+ --listar todos os alugueis mostrando as datas de início e fim, o nome do cliente que alugou e nome do modelo do carro
+
+ SELECT Descricao, nomeCliente,nomeModelo, PlacaVeiculo  FROM ALUGUEL
+INNER JOIN CLIENTE
+ON ALUGUEL.idCliente = CLIENTE.idCliente
+INNER JOIN VEICULO
+ON ALUGUEL.idVeiculo = VEICULO.idVeiculo
+INNER JOIN MODELO
+ON MODELO.idModelo = VEICULO.idModelo
+GO
+
+
+-- listar os alugueis de um determinado cliente mostrando seu nome, as datas de início e fim e o nome do modelo do carro
+
+ SELECT Descricao, nomeCliente,nomeModelo, PlacaVeiculo  FROM ALUGUEL
+INNER JOIN CLIENTE
+ON ALUGUEL.idCliente = CLIENTE.idCliente
+INNER JOIN VEICULO
+ON ALUGUEL.idVeiculo = VEICULO.idVeiculo
+INNER JOIN MODELO
+ON MODELO.idModelo = VEICULO.idModelo
+WHERE CLIENTE.nomeCliente = 'Catharina';
+GO

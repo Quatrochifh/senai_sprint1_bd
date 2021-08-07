@@ -29,6 +29,9 @@ GO
 
 
 INSERT INTO ALUGUEL(idVeiculo, idCliente, Descricao)
-VALUES(2, 3, 'carro verde'),(3,4, 'carro amarelo');
+VALUES(2, 3, '12.12.21 A 15.12.21'),(3,4, '15.02.21 A 16.02.21');
 GO
 
+--DELETE FROM ALUGUEL 
+--WHERE idAluguel in(7,8)
+--GO
